@@ -1,18 +1,17 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <v-btn fixed bottom right color="secondary" class="black--text">Test FAB</v-btn>
+    <NewsCarousel />
+    <h1>This is an about page</h1>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import NewsCarousel from '@/components/NewsCarousel.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    NewsCarousel
   }
 }
 </script>
