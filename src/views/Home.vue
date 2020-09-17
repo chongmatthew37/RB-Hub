@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <NewsCarousel />
-    <h1>This is an about page</h1>
+    <h1>Later Gator Daily Announcements - {{ new Date() | moment("MMMM DD") }}</h1>
   </div>
 </template>
 

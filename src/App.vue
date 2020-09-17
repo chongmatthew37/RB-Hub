@@ -37,7 +37,7 @@
           </v-list-item>
           <v-list-item link @click="$router.push('/settings')">
             <v-list-item-action>
-              <v-icon>mdi-settings</v-icon>
+              <v-icon>mdi-cog</v-icon>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>Settings</v-list-item-title>
@@ -84,6 +84,14 @@
         <span class="mr-2">Dark Mode</span>
         <v-icon>mdi-theme-light-dark</v-icon>
       </v-btn>
+
+      <v-avatar
+      @click="console.log('Hello')"
+      color="secondary"
+      class="black--text"
+      >
+        MT
+      </v-avatar>
     </v-app-bar>
 
     <v-content>
