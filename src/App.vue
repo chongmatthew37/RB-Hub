@@ -2,8 +2,21 @@
 
   <v-app>
     <v-navigation-drawer app v-model="drawer" clipped>
+      <v-list-item v-if="$vuetify.breakpoint.mdAndDown">
+        <v-list-item-content>
+          <v-list-item-title class="title">
+            {{ $router.currentRoute.meta.title }}
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            River Bluff High School
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
       <v-list dense>
-          <v-list-item link @click="$router.push('/')">
+          <v-list-item link @click="$router.push('/')" active>
             <v-list-item-action>
               <v-icon>mdi-home</v-icon>
             </v-list-item-action>
@@ -11,7 +24,7 @@
               <v-list-item-title>Home</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item link @click="$router.push('/welcome')">
+          <v-list-item link @click="$router.push('/news')">
             <v-list-item-action>
               <v-icon>mdi-newspaper</v-icon>
             </v-list-item-action>
@@ -25,14 +38,6 @@
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>Map</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item link @click="$router.push('/schedule')">
-            <v-list-item-action>
-              <v-icon>mdi-clock-outline</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>Schedule</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item link @click="$router.push('/settings')">
@@ -61,6 +66,7 @@
           contain
           :src="require('./assets/logo.svg')"
           transition="scale-transition"
+          height="50"
           width="120"
           @click="$router.push('/')"
         />
@@ -76,14 +82,6 @@
       </div>
 
       <v-spacer />
-
-      <v-btn
-      @click="$vuetify.theme.dark = !$vuetify.theme.dark"
-      text
-      >
-        <span class="mr-2">Dark Mode</span>
-        <v-icon>mdi-theme-light-dark</v-icon>
-      </v-btn>
 
       <v-avatar
       @click="console.log('Hello')"
@@ -108,8 +106,10 @@
 export default {
   name: 'App',
 
-  components: {
-    //
+  watch: {
+    '$route' (to) {
+      document.title = to.meta.title + ' | RB Hub' || 'RB Hub'
+    }
   },
 
   data: () => ({
