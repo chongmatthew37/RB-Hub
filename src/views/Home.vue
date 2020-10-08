@@ -1,17 +1,48 @@
 <template>
   <div class="home">
-    <NewsCarousel />
-    <h1>Later Gator Daily Announcements - {{ new Date() | moment("MMMM DD") }}</h1>
+      <h1 class="text-h2 mt-5 mb-10">Welcome to RB Hub!</h1>
+      <v-btn 
+        :color="button.color"
+        height="200"
+        width="200"
+        class="mr-5 mb-5"
+        v-for="(button, i) in buttons"
+        :key="i"
+      >
+        <span>
+          <v-icon x-large>{{ button.icon }}</v-icon>
+          <br />
+          {{ button.title }}
+        </span>
+      </v-btn>
   </div>
 </template>
 
 <script>
-import NewsCarousel from '@/components/NewsCarousel.vue'
-
 export default {
-  name: 'home',
-  components: {
-    NewsCarousel
-  }
+  name: 'Home',
+
+  data: () => ({
+    "buttons": [
+      {
+        "title": "Home",
+        "icon": "mdi-home",
+        "link": "/home",
+        "color": "primary"
+      },
+      {
+        "title": "News",
+        "icon": "mdi-newspaper",
+        "link": "/news",
+        "color": "error"
+      },
+      {
+        "title": "Map",
+        "icon": "mdi-map",
+        "link": "/map",
+        "color": "info"
+      },
+    ],
+  })
 }
 </script>

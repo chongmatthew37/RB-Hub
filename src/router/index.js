@@ -18,47 +18,50 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
+    meta: {
+      title: 'Home',
+    }
   },
   {
     path: '/about',
     name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import('../views/About.vue'),
+    meta: {
+      title: 'About',
+    }
   },
   {
-    path: '/welcome',
-    name: 'helloworld',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/HelloWorld.vue')
+    path: '/news',
+    name: 'news',
+    component: () => import('../views/News.vue'),
+    meta: {
+      title: 'News',
+    }
   },
   {
     path: '/map',
     name: 'map',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Map.vue')
+    component: () => import('../views/Map.vue'),
+    meta: {
+      title: 'Map',
+    }
   },
-  {
-    path: '/schedule',
-    name: 'schedule',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Schedule.vue')
-  },
+  // {
+  //   path: '/schedule',
+  //   name: 'schedule',
+  //   component: () => import('../views/Schedule.vue'),
+  //   meta: {
+  //     title: 'Schedule',
+  //   }
+  // },
   {
     path: '/settings',
     name: 'settings',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Settings.vue')
+    component: () => import('../views/Settings.vue'),
+    meta: {
+      title: 'Settings',
+    }
   },
   {
     path: '*',
