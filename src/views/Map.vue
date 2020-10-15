@@ -119,7 +119,7 @@ export default {
       {
         id: 0,
         name: 'A Commons',
-        image: '/img/a-commons.png',
+        image: '/img/locations/commons.jpg',
         links: [
           {
             title: 'Teacher Schedules',
@@ -131,7 +131,7 @@ export default {
       {
         id: 1,
         name: 'B Commons',
-        image: '/img/a-commons.png',
+        image: '/img/locations/commons.jpg',
         links: [
           {
             title: 'Teacher Schedules',
@@ -143,7 +143,7 @@ export default {
       {
         id: 2,
         name: 'C Commons',
-        image: '/img/a-commons.png',
+        image: '/img/locations/commons.jpg',
         links: [
           {
             title: 'Teacher Schedules',
@@ -155,7 +155,7 @@ export default {
       {
         id: 3,
         name: 'D Commons',
-        image: '/img/a-commons.png',
+        image: '/img/locations/commons.jpg',
         links: [
           {
             title: 'Teacher Schedules',

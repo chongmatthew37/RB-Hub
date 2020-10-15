@@ -2,8 +2,8 @@
     <div class="news">
         <v-carousel>
           <v-carousel-item
-            v-for="item in carousel"
-            :key="item"
+            v-for="(item, index) in carousel"
+            :key="index"
             :src="item.thumbnail"
             cycle=true
           >
