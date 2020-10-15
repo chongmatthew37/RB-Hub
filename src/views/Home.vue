@@ -8,8 +8,9 @@
         class="mr-5 mb-5"
         v-for="(button, i) in buttons"
         :key="i"
+        :to="button.link"
       >
-        <span>
+        <span style="text-align: center">
           <v-icon x-large>{{ button.icon }}</v-icon>
           <br />
           {{ button.title }}
@@ -25,12 +26,6 @@ export default {
   data: () => ({
     "buttons": [
       {
-        "title": "Home",
-        "icon": "mdi-home",
-        "link": "/home",
-        "color": "primary"
-      },
-      {
         "title": "News",
         "icon": "mdi-newspaper",
         "link": "/news",
@@ -41,6 +36,12 @@ export default {
         "icon": "mdi-map",
         "link": "/map",
         "color": "info"
+      },
+      {
+        "title": "Settings",
+        "icon": "mdi-cog",
+        "link": "/settings",
+        "color": "primary"
       },
     ],
   })
