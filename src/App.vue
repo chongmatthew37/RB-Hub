@@ -88,7 +88,9 @@
       color="secondary"
       class="black--text"
       >
-        MT
+        <img
+          :src="$root.user.photoURL"
+        />
       </v-avatar>
     </v-app-bar>
 
