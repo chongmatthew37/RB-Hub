@@ -120,31 +120,66 @@ export default {
         id: 0,
         name: 'A Commons',
         image: '/img/a-commons.png',
+        links: [
+          {
+            title: 'Teacher Schedules',
+            subtitle: 'See which teachers work in this commons and their schedules.',
+            href: 'https://lexington1.schoology.com/attachment/1374401087/docviewer'
+          }
+        ]
       },
       {
         id: 1,
         name: 'B Commons',
         image: '/img/a-commons.png',
+        links: [
+          {
+            title: 'Teacher Schedules',
+            subtitle: 'See which teachers work in this commons and their schedules.',
+            href: 'https://lexington1.schoology.com/attachment/1374401087/docviewer'
+          }
+        ]
       },
       {
         id: 2,
         name: 'C Commons',
         image: '/img/a-commons.png',
+        links: [
+          {
+            title: 'Teacher Schedules',
+            subtitle: 'See which teachers work in this commons and their schedules.',
+            href: 'https://lexington1.schoology.com/attachment/1374401087/docviewer'
+          }
+        ]
       },
       {
         id: 3,
         name: 'D Commons',
         image: '/img/a-commons.png',
+        links: [
+          {
+            title: 'Teacher Schedules',
+            subtitle: 'See which teachers work in this commons and their schedules.',
+            href: 'https://lexington1.schoology.com/attachment/1374401087/docviewer'
+          }
+        ]
       },
       {
         id: 4,
-        name: 'River Cafe',
-        image: '/img/a-commons.png',
+        name: 'River Café',
+        image: '/img/locations/river-cafe.jpg',
+        links: [
+          {
+            title: 'Lunch Menu',
+            subtitle: "See what's for lunch today in the River Café!",
+            href: 'https://schools.mealviewer.com/school/RiverBluffHigh'
+          }
+        ]
       },
       {
         id: 5,
         name: 'Gym',
-        image: '/img/a-commons.png',
+        image: '/img/locations/gym.png',
       },
     ],
     location: null,

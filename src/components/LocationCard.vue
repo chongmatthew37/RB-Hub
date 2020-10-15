@@ -3,7 +3,7 @@
     <v-toolbar 
       dark
       prominent
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+      :src="location.image"
     >
       <v-toolbar-title>{{ location.name }}</v-toolbar-title>
       <v-spacer></v-spacer>
@@ -15,47 +15,19 @@
       <v-subheader>Information</v-subheader>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title>Content filtering</v-list-item-title>
-          <v-list-item-subtitle>Set the content filtering level to restrict apps that can be downloaded
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>Password</v-list-item-title>
-          <v-list-item-subtitle>Require password for purchase or use password to restrict purchase
+          <v-list-item-title>Current Occupancy</v-list-item-title>
+          <v-list-item-subtitle>{{ Math.floor(Math.random() * Math.floor(50)) }} / 50
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-list>
     <v-divider></v-divider>
-    <v-list three-line subheader>
-      <v-subheader>General</v-subheader>
-      <v-list-item>
-        <v-list-item-action>
-          <!-- <v-checkbox v-model="notifications"></v-checkbox> -->
-        </v-list-item-action>
+    <v-list three-line subheader v-if="location.links">
+      <v-subheader>Links</v-subheader>
+      <v-list-item v-for="(link, index) in location.links" :key="index">
         <v-list-item-content>
-          <v-list-item-title>Notifications</v-list-item-title>
-          <v-list-item-subtitle>Notify me about updates to apps or games that I downloaded</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item>
-        <v-list-item-action>
-          <!-- <v-checkbox v-model="sound"></v-checkbox> -->
-        </v-list-item-action>
-        <v-list-item-content>
-          <v-list-item-title>Sound</v-list-item-title>
-          <v-list-item-subtitle>Auto-update apps at any time. Data charges may apply</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item>
-        <v-list-item-action>
-          <!-- <v-checkbox v-model="widgets"></v-checkbox> -->
-        </v-list-item-action>
-        <v-list-item-content>
-          <v-list-item-title>Auto-add widgets</v-list-item-title>
-          <v-list-item-subtitle>Automatically add home screen widgets</v-list-item-subtitle>
+          <v-list-item-title><a target="_blank" :href="link.href">{{ link.title }}</a></v-list-item-title>
+          <v-list-item-subtitle>{{ link.subtitle }}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
     </v-list>
